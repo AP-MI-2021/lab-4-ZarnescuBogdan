@@ -133,7 +133,7 @@ def main():
         if optiune == '1':
             l = readList()
         elif optiune == '2':
-            sirCautat = input('Dati sirul: '))
+            sirCautat = input('Dati sirul: ')
             print(gasesteSirDeCaractere(l, sirCautat))
         elif optiune == '3':
             print(siruriRepetate(l))
