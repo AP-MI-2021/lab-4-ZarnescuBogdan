@@ -98,7 +98,6 @@ def procesareLista(l):
 
 def testProcesareLista():
     assert procesareLista(['aaa', 'bbab', 'caamtc', 'drd', 'aaa']) == [9, 9, 9, 'drd', 9]
-
 def readList():
     givenStr = input('Dati elementele listei, separate printr-o virgula: ')
     numbersAsStr = givenStr.split(',')
@@ -149,4 +148,5 @@ def main():
             print('Optiune invalida! Reincercati: ')
 
 testAll()
-main()
+if __name__ == '__main__':
+    main()
