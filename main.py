@@ -62,11 +62,14 @@ def procesareLista(l):
     :return: lista obținută prin înlocuirea șirurilor care conțin caracterul care apare de cele mai
              multe ori în toată lista cu numărul de apariții ale acestui caracter.
     '''
+    l1 = []
+    for x in l:
+        l1.append(x)
     caractere = []
-    if len(l) > 0:
-        for i in range(len(l)):
-            for j in range(len(l[i])):
-                caractere.append(l[i][j])
+    if len(l1) > 0:
+        for i in range(len(l1)):
+            for j in range(len(l1[i])):
+                caractere.append(l1[i][j])
     caractere.sort()
     nrApMax = 1
     nrAp = 1
@@ -88,13 +91,13 @@ def procesareLista(l):
             caracter = caractere[len(caractere) - 1]
     for i in range(len(l)):
         ok = 0
-        for j in range(len(l[i])):
-            if l[i][j] == caracter:
+        for j in range(len(l1[i])):
+            if l1[i][j] == caracter:
                 ok = 1
                 break
         if ok == 1:
-            l[i] = nrApMax
-    return l
+            l1[i] = nrApMax
+    return l1
 
 def testProcesareLista():
     assert procesareLista(['aaa', 'bbab', 'caamtc', 'drd', 'aaa']) == [9, 9, 9, 'drd', 9]
